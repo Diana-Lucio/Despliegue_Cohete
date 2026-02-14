@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Centro de Control - Cohete</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #180c15;
+            color: white;
+        }
+
+        header {
+            background-color: #271127;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+            border-bottom: 2px solid #371f32;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .panel {
+            background-color: #371f32;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        .panel h2 {
+            margin-top: 0;
+            font-size: 18px;
+            border-bottom: 1px solid #513750;
+            padding-bottom: 5px;
+        }
+
+        .data {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+
+        .status {
+            font-size: 22px;
+            font-weight: bold;
+            color: rgb(46, 172, 46);
+        }
+
+        .buttons {
+            margin-top: 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .launch {
+            background-color: #0c692e;
+            color: white;
+        }
+
+        .abort {
+            background-color: #801616;
+            color: white;
+        }
+
+        .connect {
+            background-color: #102d6c;
+            color: white;
+        }
+
+        .graph {
+            height: 250px;
+            background-color: #271127;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: gray;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 1px solid #371f32;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    🚀 Centro de Control 🚀
+</header>
+
+<div class="container">
+
+    <!-- Panel Izquierdo -->
+    <div class="panel">
+        <h2>Estado del Cohete</h2>
+        <div class="status">EN TIERRA</div>
+
+        <h2>Tiempo</h2>
+        <div class="data">00:00</div>
+
+        <h2>Batería</h2>
+        <div class="data">100%</div>
+    </div>
+
+    <!-- Panel Central -->
+    <div class="panel">
+        <h2>Gráfica en Tiempo Real</h2>
+        <div class="graph">
+            Aquí irá la gráfica de altura 
+        </div>
+    </div>
+
+    <!-- Panel Derecho -->
+    <div class="panel">
+        <h2>Datos del Vuelo</h2>
+        <div class="data">Altura: 0 m</div>
+        <div class="data">Velocidad: 0 m/s</div>
+        <div class="data">Temperatura: 0 °C</div>
+        <div class="data">Aceleración: 0 m/s²</div>
+
+        <div class="buttons">
+            <button class="connect">Conectar</button>
+            <button class="launch">Iniciar Lanzamiento</button>
+            <button class="abort">Abortar</button>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    Despliegue
+</footer>
+
+</body>
+</html>
